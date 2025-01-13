@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Traversing method demo</title>
+    <style>
+      li {
+        background-color: lightblue;
+        padding: 5px;
+        display: inline-block;
+      }
+      .selected {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Itme 1</li>
+      <li>Itme 2</li>
+      <li>Itme 3</li>
+      <li >Itme 4</li>
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function () {
+        $("li").click(function () {
+          $(this).addClass("selected").siblings().removeClass("selected");
+        });
+      });
+    </script>
+  </body>
+</html>

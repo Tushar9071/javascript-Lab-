@@ -1,0 +1,15 @@
+<script type="text/javascript">
+    let a = 24;
+    let b = 36;
+    let originalA = a;
+    let originalB = b; 
+    while (b != 0) {
+        let temp = b;
+        b = a % b;
+        a = temp;
+    }
+
+    let gcd = a;
+    let lcm = (originalA * originalB) / gcd; 
+    document.write(lcm);
+</script>

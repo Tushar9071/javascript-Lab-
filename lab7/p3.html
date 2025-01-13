@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <style>
+      .demo {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        margin: 10px;
+        display: inline-flex;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>DOM Muipulation Demo</h1>
+    <button id="add">Add</button>
+    <button id="remove">Remove</button>
+    <div id="boxes"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function () {
+        $("#add").click(function () {
+          let newBox = $('<div class="demo"></div>');
+          $("#boxes").append(newBox);
+          console.log("add new box");
+        });
+        $("#remove").click(function () {
+          $(".demo:last").remove();
+          console.log("remove box");
+        });
+      });
+    </script>
+  </body>
+</html>

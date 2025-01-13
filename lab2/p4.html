@@ -1,0 +1,21 @@
+<script type="text/javascript">
+	let rev
+	let n = parseInt(prompt("Enter value:"));
+	let ans=n
+	let sum=0
+	while(n>0)
+	{
+		rev = n%10;	
+		sum = sum * 10 + rev;
+		n = parseInt(n/10)
+	}
+	
+	if (ans	== sum) 
+	{
+		document.write("This number is palindrom");
+	}
+	else
+	{
+		document.write("This number is not palindrom")
+	}
+</script>

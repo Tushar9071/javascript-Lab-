@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <style>
+            div{
+                height: 750px;
+                width: 500px;
+                background-color: azure;
+                border: 2px solid black;
+            }
+            input{
+                width: 420px;
+                height: 50px;
+                font-size: 20px;
+            }
+            button{
+                height: 100px;
+                width: 100px;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            
+            <div>
+                <h1>Simple calculator</h1>
+                <br>
+                <input type="text" id="display">
+                <br>
+                <br>
+                <br>
+                <button onclick="cleardisplay()">C</button>
+                <button onclick="appendCharacter('/')">/</button>
+                <button onclick="appendCharacter('*')">*</button>
+                <button onclick="appendCharacter('%')">%</button>
+                <br>
+                <button onclick="appendCharacter('7')">7</button>
+                <button onclick="appendCharacter('8')">8</button>
+                <button onclick="appendCharacter('9')">9</button>
+                <button onclick="appendCharacter('+')">+</button>
+                <br>
+                <button onclick="appendCharacter('4')">4</button>
+                <button onclick="appendCharacter('5')">5</button>
+                <button onclick="appendCharacter('6')">6</button>
+                <button onclick="appendCharacter('-')">-</button>
+                <br>
+                <button onclick="appendCharacter('1')">1</button>
+                <button onclick="appendCharacter('2')">2</button>
+                <button onclick="appendCharacter('3')">3</button>
+                <button onclick="calculate()">=</button>
+                <br>
+                <br>
+                <button onclick="remove()">Delete</button>
+            </div>
+        </center>
+        <script>
+            function cleardisplay()
+            {
+                document.getElementById("display").value="";
+            }
+            function appendCharacter(char)
+            {
+                document.getElementById("display").value += char;
+            }
+            function calculate()
+            {
+                document.getElementById("display").value=eval(document.getElementById("display").value);
+            }
+            function remove()
+            {
+                document.getElementById("display").value =(document.getElementById("display").value).slice(0,-1);
+            }
+        </script>
+    </body>
+</html>

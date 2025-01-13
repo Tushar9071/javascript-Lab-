@@ -1,0 +1,22 @@
+<script type="text/javascript">
+	let count= false;
+	let a = parseInt(prompt("Enter value 1:"));
+	for ( i = 2 ; i < a; i++) 
+	{
+		if (a%i==0) 
+		{
+			 count = true;
+			 return;
+		}
+	}
+	if (count) 
+	{
+		document.write('This is Not Prime Number')
+		
+	}
+	else
+	{
+		document.write('This is Prime Number')	
+	}
+
+</script>

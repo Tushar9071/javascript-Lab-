@@ -1,0 +1,22 @@
+<script type="text/javascript">
+	let a =prompt("Enter value:");
+	let ans=0;
+	let rem =0;
+	let n=a;
+	
+while(n>0)
+{
+	rem=n%10;
+	ans=ans+(rem*rem*rem);
+	n=parseInt(n/10);
+}
+	
+	if (ans==a) 
+	{
+		document.write(a,' Is armstrong Number');
+	}
+	else
+	{
+		document.write(a,' Is Not armstrong Number');	
+	}
+</script>

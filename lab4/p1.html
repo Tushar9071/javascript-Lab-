@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <center>
+        <table>
+            <tr>
+                <td>Username</td>
+                <td>
+                    <input type="text" name="uname" id="name">
+                </td>
+                <td><p id="emsg" style="color: red;"></p></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="text" name="email" id="email">
+                </td>
+                <td><p id="emailmsg" style="color: red;"></p></td>
+            </tr>
+            <tr>
+                <td>Mobile Number</td>
+                <td>
+                    <input type="number" name="phn" id="num">
+                </td>
+                <td><p id="nummsg" style="color: red;"></p></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>
+                    <input type="password" name="psw" id="psw">
+                </td>
+                <td><p id="pswmsg" style="color: red;"></p></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" onclick="validation(event)">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </center>
+    <script>
+        var uname=document.getElementById("name");
+        var email=document.getElementById("email");
+        var number=document.getElementById("num");
+        var password=document.getElementById("psw");
+        function validation(event)
+        {
+			event.preventDefault()
+            //var pattern=/^[a-zA-Z0-9_\.]{2,}$/;
+            //var regexp= new RegExp(pattern);
+            if(RegExp(/^[a-zA-Z0-9_\.]{2,}$/).test(uname.value))
+            {
+                document.getElementById('emsg').innerHTML=' ';
+            }
+            else
+            {
+                document.getElementById('emsg').innerHTML="Invalid";
+            }
+
+            if(RegExp(/^[a-zA-Z0-9]+@[a-z]+\.[a-z]/).test(email.value))
+            {
+                document.getElementById('emailmsg').innerHTML=' ';
+
+            }
+            else{
+                document.getElementById('emailmsg').innerHTML='Invalid';
+
+            }
+            if(RegExp(/^[0-9]{10}/).test(number.value))
+            {
+                document.getElementById('nummsg').innerHTML=' ';
+
+            }
+            else
+            {
+                document.getElementById('nummsg').innerHTML='Invalid';
+            }
+            if(RegExp(/^[a-z0-9]{8,}/).test(password.value))
+            {
+                document.getElementById('pswmsg').innerHTML=' ';
+            }
+            else
+            {
+                document.getElementById('pswmsg').innerHTML='Invalid';
+            }
+        }
+    </script>
+</body>
+</html>

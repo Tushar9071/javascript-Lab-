@@ -1,0 +1,53 @@
+<html>
+    <head></head>
+    <body>
+        <center>
+            <form>
+                <h1>Simple calculator</h1>
+                <table>
+                    <tr>
+                        <td><label>Number1</label></td>
+                        <td><input type="text" id="n1"></td>
+                        <td>
+                            <select id="s1">
+                                <option>+</option>
+                                <option>-</option>
+                                <option>*</option>
+                                <option>/</option>
+                            </select>
+                        </td>
+                        <td><label>Number2</label></td>
+                        <td><input type="text" id="n2"></td>
+                        <td>
+                            <button id="btn" type="submit" onclick="calculator()">Submit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label id="output"></label>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </center>
+        <script>
+            function calculator()
+            {
+                let n1=parseInt(document.getElementById("n1").value);
+                let n2=parseInt(document.getElementById("n2").value);
+                let opt=document.getElementById("s1").value;
+                let ans=document.getElementById("output");
+                if(opt=='+')
+                    ans.innerHTML=document.write("Addition is:"+(n1+n2));
+                else if(opt=='-')
+                    ans.innerHTML=document.write("Subtraction is:"+(n1-n2));
+                else if(opt=='*')
+                    ans.innerHTML=document.write("Multiplaction is:"+(n1*n2));
+                else if(opt=='/')
+                    ans.innerHTML=document.write("Division is:"+(n1/n2));
+                else
+                    ans.innerHTML=document.write("Invalid input");
+            }
+        </script>
+    </body>
+</html>

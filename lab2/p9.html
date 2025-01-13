@@ -1,0 +1,10 @@
+<script type="text/javascript">
+    let a = parseInt(prompt('enter number'));
+    let b = parseInt(prompt('enter number'));
+    while (b != 0) {
+        let temp = b;
+        b = a % b;
+        a = temp;
+    }
+    document.write(a);
+</script>

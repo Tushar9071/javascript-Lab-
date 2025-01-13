@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <input type="button" value="fade-in" id="btn1">
+    
+    <input type="button" value="fade-out" id="btn2">
+    
+    <input type="button" value="fade-toggle" id="btn3">
+    
+    <input type="button" value="fade-to" id="btn4">
+    <h1 id="dt">Effect</h1>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+                $('#dt').fadeIn();
+            })
+            $('#btn2').click(function(){
+                $('#dt').fadeOut();
+            })
+            $('#btn3').click(function(){
+                $('#dt').fadeToggle();
+            })
+            $('#btn4').click(function(){
+                $('#dt').fadeTo(1000,0.5);
+            })
+        })
+    </script>
+
+</body>
+</html>

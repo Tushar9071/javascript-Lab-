@@ -1,0 +1,23 @@
+<script type="text/javascript">
+	
+	let a = parseInt(prompt("Enter value 1:"));
+	let b = parseInt(prompt("Enter value 2:"));
+	for(i=a;i<=b;i++)
+	{
+		let flag=false
+		for (j=2 ; j<i;j++) 
+		{
+			if(i%j==0)
+			{
+					flag=true;
+					break;
+			}
+			
+		}
+		if (!flag) 
+		{
+			document.write(i,"<br>");
+		}
+	}
+	
+</script>
