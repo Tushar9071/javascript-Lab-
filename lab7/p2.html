@@ -26,9 +26,15 @@
             $('#btn3').click(function(){
                 $('#dt').fadeToggle();
             })
-            $('#btn4').click(function(){
-                $('#dt').fadeTo(1000,0.5);
-            })
+            $("#myElement").click(function() {
+            var currentOpacity = $(this).css("opacity");
+
+            if(currentOpacity == 1) {
+                $(this).fadeTo(1000, 0);
+            } else {
+                $(this).fadeTo(1000, 1);  
+            }
+        });
         })
     </script>
 
