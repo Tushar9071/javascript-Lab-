@@ -1,7 +1,15 @@
-const EventEmitter = require('events')
-const { emit } = require('process')
-const event = new EventEmitter()
-event.on("DU",()=>{
-        console.log("This is Du Event")
-})
-event.emit("DU")
+const em = require('events');
+class Myemitter extends em{}
+const ticker = new Myemitter()
+ticker.on('Video uploaded',(student)=>{
+        console.log('Video uploaded',student.name)
+
+},)
+ticker.emit('Video uploaded',{name:'vraj'})
+i = 0;
+
+setInterval(()=>{
+        
+        console.log('Tick'+i)
+        i++;
+},1000);
