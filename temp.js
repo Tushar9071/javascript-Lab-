@@ -1,10 +1,8 @@
-import fs from 'fs';
-import path from 'path';
+const http = require('http');
+const server = http.createServer((req, res) => {
+    res.end('/lab4/p3.html');
+})
 
-const image = fs.readFileSync(path.join('./DFD1.png'))
-let data = image.toString('base64')
-console.log(data)
-
-const buffer = Buffer.from(data, 'base64')
-
-fs.writeFileSync(path.join('./DFD1_decoded.png'), buffer)
+server.listen(3000, () => {
+    console.log('Server started at http://localhost:3000/');
+})
